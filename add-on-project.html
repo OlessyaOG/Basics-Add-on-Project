@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&family=Hina+Mincho&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <title>Add On Final Project</title>
+
+    <style>
+      body {
+        background-image: url("japan3.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: "Hina Mincho", serif;
+      }
+
+      .header {
+        background: rgba(143, 29, 20, 0.8);
+        text-align: center;
+        color: #e6dedd;
+        font-size: 25px;
+        padding: 10px;
+        border-radius: 10px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      img {
+        width: 100%;
+        transition: all 1500ms ease-in-out;
+        border-radius: 10px;
+      }
+
+      img:hover {
+        transform: scale(1.2);
+        filter: opacity(50%);
+      }
+
+      .image-gallery {
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+        margin: 50px;
+        padding-top: 45px;
+      }
+
+      .container {
+        background: rgba(143, 29, 20, 0.8);
+        border-radius: 10px;
+        margin: 0 auto;
+        max-width: 1000px;
+      }
+
+      p {
+        color: #e6dedd;
+        line-height: 1.5;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+        font-size: 30px;
+      }
+      a {
+        text-decoration: none;
+        color: #e6dedd;
+        font-family: "Hina Mincho", serif;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+      }
+
+      button {
+        background: rgba(143, 29, 20, 0.8);
+        border-radius: 15px;
+        color: #e6dedd;
+        font-size: 25px;
+        padding: 15px 25px;
+        margin: 10px;
+        transition: all 150ms ease-in-out;
+        font-family: "Hina Mincho", serif;
+        font-weight: bold;
+      }
+
+      button:hover {
+        background: #5c0404;
+        cursor: pointer;
+      }
+
+      footer,
+      .signature {
+        text-align: center;
+        margin: 30 px 0;
+        color: #e6dedd;
+        padding-top: 50px;
+        font-size: 25px;
+      }
+      .signature {
+        text-decoration: underline;
+      }
+      .dark {
+        background-image: url("japan1.jpg");
+      }
+
+      .dark .container {
+        background: rgba(31, 30, 30, 0.8);
+      }
+
+      .dark .header {
+        background: rgba(31, 30, 30, 0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <div class="header">
+      <h1>Welcome to beautiful Japan</h1>
+    </div>
+    <div class="container">
+      <div class="image-gallery">
+        <img src="japan5.jpg" />
+        <img src="japan7.jpg" />
+        <img src="japan8.jpg" />
+        <img src="japan10.jpg" />
+      </div>
+      <p>
+        Japan, with its rich tapestry of tradition and modernity, captivates my
+        heart as my favorite travel destination. The Land of the Rising Sun
+        offers an enchanting blend of ancient cultural heritage and cutting-edge
+        technology, creating a unique and immersive experience that keeps
+        drawing me back. One of the aspects that continually lures me to Japan
+        is its vibrant and diverse landscapes. From the serene cherry blossom
+        gardens of Kyoto to the bustling streets of Tokyo adorned with neon
+        lights, each city and region offers a distinct flavor. The meticulous
+        balance between nature and urban life is a testament to Japan's ability
+        to seamlessly merge the old and the new.
+      </p>
+    </div>
+
+    <div class="buttons">
+      <button>
+        <a href="https://en.wikipedia.org/wiki/Japan" target="_blank"
+          >Learn about Japan</a
+        >
+      </button>
+      <button>
+        <a href="https://hot-not-hot.netlify.app" target="_blank"
+          >Weather in Japan</a
+        >
+      </button>
+
+      <button class="theme-button">Change Theme</button>
+    </div>
+
+    <br />
+    <footer>
+      Coded by
+      <a
+        class="signature"
+        href="https://www.shecodes.io/graduates/102115-olessya-oporta"
+        target="_blank"
+        >Olessya Oporta
+      </a>
+    </footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
